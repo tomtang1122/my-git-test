@@ -16,22 +16,22 @@
                 <div>0% Interest for {{result.months}} Months*</div>
                 <div>and Earn {{result.rewardsPercent}}% Back in Rewards**</div>
             </h1>
-            <div class='text-center flex flex-col justify-between'>
-                <p class='text-base leading-5 mb-5'>on qualifying brand<sup>†</sup> purchases of
+            <div class='flex flex-col justify-between text-center'>
+                <p class='mb-5 text-base leading-5'>on qualifying brand<sup>†</sup> purchases of
                     <sup>$</sup>{{result.eligibleValue}} or more with {{result.months}} equal monthly payments required
                 </p>
                 <div class='text-[16px]'>valid <span class='gc-font-bold'>{{result.startDate}}</span> thru <span
                         class='gc-font-bold'>{{result.endDate}}</span></div>
             </div>
             <div class='mt-[30px] mx-auto w-[330px] h-[83px] flex justify-between'>
-                <div class='flex items-center justify-between flex-col'>
-                    <p class='text-[#e7131a] gc-font-bold'>PAY</p>
+                <div class='flex flex-col justify-between items-center'>
+                    <p class='text-primaryRed gc-font-bold'>PAY</p>
                     <p class='text-[26px]'><sup>$</sup>{{result.monthlyPayment}}/MO</p>
                     <p class='text-[13px]'>for {{result.months}} Months*</p>
                 </div>
                 <div class='flex justify-center items-center'><span class='text-[24px]'>+</span></div>
-                <div class='flex items-center justify-between flex-col'>
-                    <p class='text-[#e7131a] gc-font-bold'>EARN</p>
+                <div class='flex flex-col justify-between items-center'>
+                    <p class='text-primaryRed gc-font-bold'>EARN</p>
                     <p class='text-[26px]'><sup>$</sup>{{result.rewardsValue}}</p>
                     <p class='text-[13px]'>back in Rewards**</p>
                 </div>
