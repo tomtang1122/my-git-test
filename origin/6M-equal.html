@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='financing-modal'>
+        <div class='financing-image'><img src='/assets/images/pdp/PDP-Finance.jpg'></div>
+        <div class='mt-[30px] px-2'>
+            <h1 class='gc-font-black text-[26px] leading-[32px] text-center mb-0'>
+                <div>No interest If paid in full within 6</div>
+                <div>months<sup>^</sup> and earn {{result.rewardsPercent}}% back in Rewards**</div>
+            </h1>
+            <div class='text-center flex flex-col justify-between'>
+                <p class='text-base leading-5 mb-5'>on purchases made between<br><span
+                        class='gc-font-bold'>{{result.startDate}}</span> thru <span
+                        class='gc-font-bold'>{{result.endDate}}</span></p>
+                <p class='px-[18px] leading-[18px] text-[16px]'>Interest will be charged to your account from the
+                    purchase date if the promotional balance is not paid in full within 6 Months. Minimum monthly
+                    payments required.</p>
+            </div>
+            <div class='mt-[30px] mx-auto flex items-center justify-between flex-col h-[57px]'>
+                <p class='text-[#e7131a] gc-font-bold'>PROMO PURCHASE AMOUNT</p>
+                <p class='text-[26px]'><sup>$</sup>{{result.skuPrice}}</p>
+            </div>
+            <div class='mt-[30px] mx-auto w-[330px] h-[83px] flex justify-between'>
+                <div class='flex items-center justify-between flex-col'>
+                    <p class='text-[#e7131a] gc-font-bold'>SUGGESTED PAYMENT</p>
+                    <p class='text-[26px]'><sup>$</sup>{{result.suggestMonthlyPayment}}/MO</p>
+                    <p class='text-[13px]'>for {{result.months}} Months<sup>^</sup></p>
+                </div>
+                <div class='flex justify-center items-center'><span class='text-[24px]'>+</span></div>
+                <div class='flex items-center justify-between flex-col'>
+                    <p class='text-[#e7131a] gc-font-bold'>EARN</p>
+                    <p class='text-[26px]'><sup>$</sup>{{result.rewardsValue}}</p>
+                    <p class='text-[13px]'>back in Rewards**</p>
+                </div>
+            </div>
+            <div id='financing-description' class='financing-description mt-[30px] text-xs px-7'>
+                <p>The Suggested Equal Monthly Payment shown above may be greater than the required minimum monthly
+                    payment that will be on your billing statement when you use the 6-month promotional financing offer.
+                    This estimated payment:</p>
+                <ul class='list-disc pb-2' style='padding-inline-start: 26px;'>
+                    <li>Equals the promotional purchase amount divided by 6 (excluding taxes and shipping charges)
+                        rounded to the next highest whole dollar.</li>
+                    <li>Would pay off the promotional purchase amount within 6 months, but only if there are no other
+                        balances on your account at any time during the 6-month promotional period and you make your
+                        payments on time. Your total payments will equal the amount of the promotional purchase amount.
+                    </li>
+                </ul>
+                <p>If the promotional purchase amount is not paid in full within 6 months, interest will be charged to
+                    your account from the purchase date and your total payments will be greater than the amount of the
+                    promotional purchase amount.</p>
+                <p id='financingModal-view-details' style='display: block;'>Offer applies only to single-receipt
+                    qualifying purchases, excluding the following: special orders, gift cards, Guitar Center Rentals,
+                    and Guitar Center Lessons. No interest will be charged on the promo balance if you pay it off, in
+                    full, within the promotional period. If you do not, interest will be charged on the promo balance
+                    from the purchase date. The required minimum monthly payments may or may not pay off balance before
+                    the end of promotional period, depending on purchase amount, promo length and payment allocation.
+                    Regular account terms apply to non-promotional purchases and, after promotion ends, to promo
+                    balance. For new accounts: Purchase APR is 29.99%; Minimum Interest Charge is $2. Existing
+                    cardholders should see their credit card agreement for their applicable terms. Subject to credit
+                    approval.</p>
+            </div>
+            <div class='mt-[45px] mb-[50px] flex items-center px-7'><span
+                    class='border-t-[1px] flex-grow border-[#333333]'></span><span class='text-[26px]'>OR</span><span
+                    class='border-t-[1px] flex-grow border-[#333333]'></span></div>
+            <h1 class='gc-font-black text-[26px] leading-[32px] text-center mb-0'>
+                <div>0% Interest for {{secondaryOption.months}} Months*</div>
+            </h1>
+            <div class='text-center mt-4 mb-3 text-base leading-[18px] px-[40px]'>on qualifying brand† purchases of
+                <sup>$</sup>{{secondaryOption.eligibleValue}} or more with {{secondaryOption.months}} equal monthly
+                payments required. {{result.endDate}} thru {{secondaryOption.endDate}}.</div>
+            <div class='financing-description text-xs px-7'>
+                <p>*No interest will be charged, and equal monthly payments are required on promo purchase until it is
+                    paid in full. The payments equal the initial total promo purchase amount divided by the number of
+                    months in the promo period, rounded up to the next whole dollar. These payments may be higher than
+                    the payments that would be required if this purchase was a non-promo purchase. Regular account terms
+                    apply to non-promo purchases. New Account APR is 29.99%/Minimum Interest Charge is $2. Existing
+                    cardholders: See your credit card agreement terms. Subject to credit approval.</p>
+                <p>**Subject to credit approval. See your <a href='/pages/Gear-Card-Rewards.gc' target='_blank'
+                        rel='noopener'>Rewards Program Terms.</a></p>
+                <p><sup>†</sup><a href='/Special-Financing-Offers.gc' target='_blank'>View qualifying brands</a></p>
+            </div>
+        </div>
+        <style>
+            .financing-modal .financing-description p {
+                margin-bottom: 8px;
+            }
+
+            .financing-modal .financing-description a {
+                color: #e7131a;
+            }
+        </style>
+    </div>
+</body>
+
+</html>
